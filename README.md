@@ -13,7 +13,7 @@ If you'd like to setup your existing Serverless project manually to support ES6,
 
 ---
 
-## Demo
+### Demo
 
 A demo version of this project is hosted on AWS - [`https://bl8f1y6kfl.execute-api.us-east-1.amazonaws.com/dev/hello`](https://bl8f1y6kfl.execute-api.us-east-1.amazonaws.com/dev/hello)
 
@@ -39,12 +39,12 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 );
 ```
 
-## Requirements
+### Requirements
 
 - [Install the Serverless Framework](http://serverless-stack.com/chapters/setup-the-serverless-framework.html)
 - [Configure your AWS CLI](http://serverless-stack.com/chapters/configure-the-aws-cli.html)
 
-## Install
+### Install
 
 ``` bash
 $ git clone https://github.com/AnomalyInnovations/serverless-es6-starter.git
@@ -62,7 +62,7 @@ Install the Node.js packages
 $ npm install
 ```
 
-## Usage
+### Usage
 
 To run a function on your local
 
@@ -78,7 +78,7 @@ serverless deploy
 
 To add another function as a new file to your project, simply add the new file and add the reference to `serverless.yml`. The `webpack.config.js` automatically handles functions in different files.
 
-## Support
+### Support
 
 - Send us an [email](mailto:contact@anoma.ly) if you have any questions
 - Open a [new issue](https://github.com/AnomalyInnovations/serverless-es6-starter/issues/new) if you've found a bug or have some suggestions.
