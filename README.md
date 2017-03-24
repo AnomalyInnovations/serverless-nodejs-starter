@@ -73,7 +73,7 @@ $ serverless webpack invoke --function hello
 And to deploy
 
 ``` bash
-serverless deploy
+$ serverless deploy
 ```
 
 To add another function as a new file to your project, simply add the new file and add the reference to `serverless.yml`. The `webpack.config.js` automatically handles functions in different files.
