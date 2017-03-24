@@ -41,8 +41,8 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 
 ### Requirements
 
-- [Install the Serverless Framework](http://serverless-stack.com/chapters/setup-the-serverless-framework.html)
-- [Configure your AWS CLI](http://serverless-stack.com/chapters/configure-the-aws-cli.html)
+- [Install the Serverless Framework](https://serverless.com/framework/docs/providers/aws/guide/installation/)
+- [Configure your AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
 
 ### Install
 
