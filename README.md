@@ -9,7 +9,7 @@ This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-
   - And much more!
 - Automatically handles multiple functions
 
-If you'd like to setup your existing Serverless project manually to support ES6, use this [guide on Serverless-Stack.com](http://serverless-stack.com/chapters/add-support-for-es6-javascript.html).
+If you'd like to learn how to setup your existing Serverless project to support ES6, use this [guide on Serverless-Stack.com](http://serverless-stack.com/chapters/add-support-for-es6-javascript.html).
 
 ---
 
