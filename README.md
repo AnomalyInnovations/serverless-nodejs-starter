@@ -15,7 +15,7 @@ If you'd like to learn how to setup your existing Serverless project to support 
 
 ### Demo
 
-A demo version of this project is hosted on AWS - [`https://bl8f1y6kfl.execute-api.us-east-1.amazonaws.com/dev/hello`](https://bl8f1y6kfl.execute-api.us-east-1.amazonaws.com/dev/hello)
+A demo version of this project is hosted on AWS - [`https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello`](https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello)
 
 And here is the ES6 source behind it
 
