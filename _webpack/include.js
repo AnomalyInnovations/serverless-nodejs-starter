@@ -5,6 +5,6 @@ require('source-map-support').install();
 // Required if the hanlder function is async, as promises
 // can swallow error messages.
 process.on('unhandledRejection', function(e) {
-	console.log(e.stack);
-	process.exit(1);
+  console.log(e.stack);
+  process.exit(1);
 });
