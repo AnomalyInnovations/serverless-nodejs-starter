@@ -1,6 +1,6 @@
 # Serverless ES7 async/await
 
-A Serverless service that adds ES7 async/await support
+A Serverless service that adds ES7 async/await support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
 This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-webpack) plugin and Babel. It supports:
 
