@@ -11,7 +11,8 @@ This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-
 - **Sourcemaps for proper error messages**
   - Error message show the correct line numbers
   - Works in production with CloudWatch
-- **Automatic support for multiple handler functions**
+- **Automatic support for multiple handler files**
+  - No need to add a new entry to your `webpack.config.js`
 
 If you'd like to learn how to setup your existing Serverless project to support ES7 async/await, use this [guide on Serverless-Stack.com](http://serverless-stack.com/chapters/add-support-for-es6-javascript.html).
 
@@ -81,6 +82,16 @@ $ serverless deploy
 ```
 
 To add another function as a new file to your project, simply add the new file and add the reference to `serverless.yml`. The `webpack.config.js` automatically handles functions in different files.
+
+### How It Works
+
+To ensure that you get all the ES7 capabilities while showing proper error messages and seamlessly integrating with the rest of your project, we do the following:
+
+- The `webpack.config.js` loads all your handlers from the `serverless.yml` and transpiles them using Babel. This means that you don't have to edit the `webpack.config.js` when you add a new handler file.
+- Generate the sourcemaps for all the transpiled files and load the sourcemaps in each of the handler files.
+- Catch any unhandled exceptions to ensure that async functions can log errors.
+
+The result is that you should see proper error messages in your CloudWatch or console logs.
 
 ### Support
 
