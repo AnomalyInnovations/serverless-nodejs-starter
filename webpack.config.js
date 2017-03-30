@@ -1,11 +1,28 @@
-var glob = require('glob');
+var yaml = require('js-yaml');
+var fs = require('fs');
 var path = require('path');
 var nodeExternals = require('webpack-node-externals');
+
+var handlerRegex = /\.[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*$/;
+var include = './_webpack/include.js';
+var entries = {};
+
+var doc = yaml.safeLoad(fs.readFileSync('serverless.yml', 'utf8'));
+
+// Find all the hanlder files in serverless.yml
+// and build the entry array with them
+for (var key in doc.functions) {
+  var handler = doc.functions[key].handler;
+  var entryKey = handler.replace(handlerRegex, '');
+
+  // Add error handling and source map support
+  entries[entryKey] = [include, './' + entryKey + '.js'];
+}
 
 module.exports = {
   // Use all js files in project root (except
   // the webpack config) as an entry
-  entry: globEntries('!(webpack.config).js'),
+  entry: entries,
   target: 'node',
   // Generate sourcemaps for proper error messages
   devtool: 'source-map',
@@ -27,18 +44,5 @@ module.exports = {
     libraryTarget: 'commonjs',
     path: path.join(__dirname, '.webpack'),
     filename: '[name].js'
-  },
-};
-
-function globEntries(globPath) {
-  var include = './_webpack/include.js';
-  var files = glob.sync(globPath);
-  var entries = {};
-
-  for (var i = 0; i < files.length; i++) {
-    var entry = files[i];
-    entries[path.basename(entry, path.extname(entry))] = [include, './' + entry];
   }
-
-  return entries;
-}
+};
