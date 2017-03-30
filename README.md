@@ -1,9 +1,10 @@
-# Serverless ES6 Starter
-A starter project for the Serverless Framework with ES6 support
+# Serverless ES7 async/await
+
+A Serverless service that adds ES7 async/await support
 
 This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-webpack) plugin and Babel. It supports:
 
-- **ES6 syntax in your handler functions**
+- **ESt syntax in your handler functions**
   - Use async/await
   - The spread operator
   - And much more!
@@ -12,7 +13,7 @@ This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-
   - Works in production with CloudWatch
 - **Automatic support for multiple handler functions**
 
-If you'd like to learn how to setup your existing Serverless project to support ES6, use this [guide on Serverless-Stack.com](http://serverless-stack.com/chapters/add-support-for-es6-javascript.html).
+If you'd like to learn how to setup your existing Serverless project to support ES7 async/await, use this [guide on Serverless-Stack.com](http://serverless-stack.com/chapters/add-support-for-es6-javascript.html).
 
 ---
 
@@ -20,7 +21,7 @@ If you'd like to learn how to setup your existing Serverless project to support 
 
 A demo version of this project is hosted on AWS - [`https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello`](https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello)
 
-And here is the ES6 source behind it
+And here is the ES7 source behind it
 
 ``` javascript
 export const hello = async (event, context, callback) => {
@@ -50,13 +51,13 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 ### Install
 
 ``` bash
-$ git clone https://github.com/AnomalyInnovations/serverless-es6-starter.git
+$ serverless install --url https://github.com/AnomalyInnovations/serverless-es7
 ```
 
 Enter the new directory
 
 ``` bash
-$ cd serverless-es6-starter
+$ cd serverless-es7
 ```
 
 Install the Node.js packages
@@ -84,5 +85,5 @@ To add another function as a new file to your project, simply add the new file a
 ### Support
 
 - Send us an [email](mailto:contact@anoma.ly) if you have any questions
-- Open a [new issue](https://github.com/AnomalyInnovations/serverless-es6-starter/issues/new) if you've found a bug or have some suggestions.
+- Open a [new issue](https://github.com/AnomalyInnovations/serverless-es7/issues/new) if you've found a bug or have some suggestions.
 - Or submit a pull request!
