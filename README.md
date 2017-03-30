@@ -20,7 +20,7 @@ If you'd like to learn how to setup your existing Serverless project to support 
 
 ### Demo
 
-A demo version of this project is hosted on AWS - [`https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello`](https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello)
+A demo version of this service is hosted on AWS - [`https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello`](https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello)
 
 And here is the ES7 source behind it
 
@@ -49,7 +49,7 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 - [Install the Serverless Framework](https://serverless.com/framework/docs/providers/aws/guide/installation/)
 - [Configure your AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
 
-### Install
+### Installation
 
 ``` bash
 $ serverless install --url https://github.com/AnomalyInnovations/serverless-es7
@@ -89,7 +89,7 @@ To ensure that you get all the ES7 capabilities while showing proper error messa
 
 - The `webpack.config.js` loads all your handlers from the `serverless.yml` and transpiles them using Babel. This means that you don't have to edit the `webpack.config.js` when you add a new handler file.
 - Generate the sourcemaps for all the transpiled files and load the sourcemaps in each of the handler files.
-- Catch any unhandled exceptions to ensure that async functions can log errors.
+- Catch and log any unhandled exceptions to ensure that async functions can log errors.
 
 The result is that you should see proper error messages in your CloudWatch or console logs.
 
