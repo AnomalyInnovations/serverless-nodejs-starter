@@ -4,7 +4,7 @@ A Serverless service that adds ES7 async/await support
 
 This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-webpack) plugin and Babel. It supports:
 
-- **ESt syntax in your handler functions**
+- **ES7 syntax in your handler functions**
   - Use async/await
   - The spread operator
   - And much more!
