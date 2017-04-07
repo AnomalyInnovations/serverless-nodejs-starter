@@ -1,6 +1,6 @@
 # Serverless ES7 async/await
 
-A Serverless service that adds ES7 async/await support
+A Serverless service that adds ES7 async/await support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
 This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-webpack) plugin and Babel. It supports:
 
@@ -50,6 +50,8 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 - [Configure your AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
 
 ### Installation
+
+To create a new Serverless project with ES7 support.
 
 ``` bash
 $ serverless install --url https://github.com/AnomalyInnovations/serverless-es7
