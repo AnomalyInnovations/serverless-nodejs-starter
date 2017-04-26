@@ -1,7 +1,7 @@
 {
-  "name": "serverless-es6-starter",
+  "name": "serverless-es7-starter",
   "version": "1.0.0",
-  "description": "A starter project for the Serverless Framework with ES6 support",
+  "description": "A starter project for the Serverless Framework with ES7 support",
   "main": "handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
