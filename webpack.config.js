@@ -20,8 +20,6 @@ for (var key in doc.functions) {
 }
 
 module.exports = {
-  // Use all js files in project root (except
-  // the webpack config) as an entry
   entry: entries,
   target: 'node',
   // Generate sourcemaps for proper error messages
@@ -38,8 +36,6 @@ module.exports = {
       exclude: /node_modules/,
     }]
   },
-  // We are going to create multiple APIs in this guide, and we are 
-  // going to create a js file to for each, we need this output block
   output: {
     libraryTarget: 'commonjs',
     path: path.join(__dirname, '.webpack'),
