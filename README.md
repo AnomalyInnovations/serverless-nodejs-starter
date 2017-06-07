@@ -100,3 +100,7 @@ The result is that you should see proper error messages in your CloudWatch or co
 - Send us an [email](mailto:contact@anoma.ly) if you have any questions
 - Open a [new issue](https://github.com/AnomalyInnovations/serverless-es7/issues/new) if you've found a bug or have some suggestions.
 - Or submit a pull request!
+
+### Maintainers
+
+Serverless ES7 Service is maintained by Frank Wang ([@fanjiewang](https://twitter.com/fanjiewang)) & Jay V ([@jayair](https://twitter.com/jayair)). [**Subscribe to our newsletter**](http://eepurl.com/cEaBlf) for updates. Send us an [email](mailto:contact@anoma.ly) if you have any questions.
