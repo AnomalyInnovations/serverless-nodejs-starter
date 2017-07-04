@@ -9,7 +9,7 @@ var entries = {};
 
 var doc = yaml.safeLoad(fs.readFileSync('serverless.yml', 'utf8'));
 
-// Find all the hanlder files in serverless.yml
+// Find all the handler files in serverless.yml
 // and build the entry array with them
 for (var key in doc.functions) {
   var handler = doc.functions[key].handler;
