@@ -19,7 +19,7 @@ If you'd like to learn how to setup your existing Serverless project to support 
 
 ### Demo
 
-A demo version of this service is hosted on AWS - [`https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello`](https://2njfspcvna.execute-api.us-east-1.amazonaws.com/dev/hello)
+A demo version of this service is hosted on AWS - [`https://2njfspcvna.execute-api.us-east-1.amazonaws.com/dev/hello`](https://2njfspcvna.execute-api.us-east-1.amazonaws.com/dev/hello)
 
 And here is the ES7 source behind it
 
