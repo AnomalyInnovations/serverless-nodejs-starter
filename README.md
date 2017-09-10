@@ -6,7 +6,6 @@ This uses the [serverless-webpack](https://github.com/elastic-coders/serverless-
 
 - **ES7 syntax in your handler functions**
   - Use async/await
-  - The spread operator
   - And much more!
 - **Sourcemaps for proper error messages**
   - Error message show the correct line numbers
@@ -20,7 +19,7 @@ If you'd like to learn how to setup your existing Serverless project to support 
 
 ### Demo
 
-A demo version of this service is hosted on AWS - [`https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello`](https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello)
+A demo version of this service is hosted on AWS - [`https://ndgmy14knc.execute-api.us-east-1.amazonaws.com/dev/hello`](https://2njfspcvna.execute-api.us-east-1.amazonaws.com/dev/hello)
 
 And here is the ES7 source behind it
 
@@ -74,13 +73,19 @@ $ npm install
 To run a function on your local
 
 ``` bash
-$ serverless webpack invoke --function hello
+$ serverless invoke local --function hello
 ```
 
-And to deploy
+Deploy your project
 
 ``` bash
 $ serverless deploy
+```
+
+Deploy a single function
+
+``` bash
+$ serverless deploy function --function hello
 ```
 
 To add another function as a new file to your project, simply add the new file and add the reference to `serverless.yml`. The `webpack.config.js` automatically handles functions in different files.
@@ -89,7 +94,7 @@ To add another function as a new file to your project, simply add the new file a
 
 To ensure that you get all the ES7 capabilities while showing proper error messages and seamlessly integrating with the rest of your project, we do the following:
 
-- The `webpack.config.js` loads all your handlers from the `serverless.yml` and transpiles them using Babel. This means that you don't have to edit the `webpack.config.js` when you add a new handler file.
+- The `webpack.config.js` loads all your handlers using the `slsw.lib.entries` from the serverless-webpack plugin. This means that you don't have to edit the `webpack.config.js` when you add a new handler file.
 - Generate the sourcemaps for all the transpiled files and load the sourcemaps in each of the handler files.
 - Catch and log any unhandled exceptions to ensure that async functions can log errors.
 

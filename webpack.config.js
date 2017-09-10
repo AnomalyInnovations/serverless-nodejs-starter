@@ -1,23 +1,11 @@
-var yaml = require('js-yaml');
-var fs = require('fs');
-var path = require('path');
-var nodeExternals = require('webpack-node-externals');
+const slsw          = require('serverless-webpack');
+const nodeExternals = require('webpack-node-externals');
 
-var handlerRegex = /\.[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*$/;
-var include = './_webpack/include.js';
-var entries = {};
-
-var doc = yaml.safeLoad(fs.readFileSync('serverless.yml', 'utf8'));
-
-// Find all the handler files in serverless.yml
-// and build the entry array with them
-for (var key in doc.functions) {
-  var handler = doc.functions[key].handler;
-  var entryKey = handler.replace(handlerRegex, '');
-
-  // Add error handling and source map support
-  entries[entryKey] = [include, './' + entryKey + '.js'];
-}
+// Add error handling and source map support
+const entries = Object.keys(slsw.lib.entries).reduce((acc, key) => ({
+  ...acc,
+  [key]: ["./_webpack/include.js", slsw.lib.entries[key]]
+}), {});
 
 module.exports = {
   entry: entries,
@@ -35,10 +23,5 @@ module.exports = {
       include: __dirname,
       exclude: /node_modules/,
     }]
-  },
-  output: {
-    libraryTarget: 'commonjs',
-    path: path.join(__dirname, '.webpack'),
-    filename: '[name].js'
   }
 };
