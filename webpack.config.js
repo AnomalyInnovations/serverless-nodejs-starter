@@ -1,11 +1,11 @@
-const slsw          = require('serverless-webpack');
-const nodeExternals = require('webpack-node-externals');
+var slsw          = require('serverless-webpack');
+var nodeExternals = require('webpack-node-externals');
 
 // Add error handling and source map support
-const entries = Object.keys(slsw.lib.entries).reduce((acc, key) => ({
-  ...acc,
-  [key]: ["./_webpack/include.js", slsw.lib.entries[key]]
-}), {});
+var entries = Object.keys(slsw.lib.entries).reduce(function(acc, key) {
+  acc[key] = ["./_webpack/include.js", slsw.lib.entries[key]];
+  return acc;
+}, {});
 
 module.exports = {
   entry: entries,
