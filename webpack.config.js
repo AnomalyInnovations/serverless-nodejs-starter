@@ -1,14 +1,8 @@
 var slsw          = require('serverless-webpack');
 var nodeExternals = require('webpack-node-externals');
 
-// Add error handling and source map support
-var entries = Object.keys(slsw.lib.entries).reduce(function(acc, key) {
-  acc[key] = ["./_webpack/include.js", slsw.lib.entries[key]];
-  return acc;
-}, {});
-
 module.exports = {
-  entry: entries,
+  entry: slsw.lib.entries,
   target: 'node',
   // Generate sourcemaps for proper error messages
   devtool: 'source-map',
