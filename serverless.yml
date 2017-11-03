@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: serverless-es7-starter # NOTE: update this with your service name
+service: sls-es7-travis # NOTE: update this with your service name
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
