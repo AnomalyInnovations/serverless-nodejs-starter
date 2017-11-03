@@ -6,4 +6,4 @@ cache:
     - node_modules
 script: 
     - npm install -g serverless
-    - sls deploy --stage=$TRAVIS_BRANCH
+    - sls deploy --stage=`echo $TRAVIS_BRANCH | sed 's/-//g'`
