@@ -70,6 +70,12 @@ $ npm install
 
 ### Usage
 
+To run unit tests on your local
+
+``` bash
+$ npm test
+```
+
 To run a function on your local
 
 ``` bash
