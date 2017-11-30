@@ -1,12 +1,14 @@
-# Serverless ES7 async/await
+# Serverless Node.js Starter
 
-A Serverless service that adds ES7 async/await support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
+A Serverless starter that adds ES7 async/await and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
-This uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin and Babel. It supports:
+[Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-es7) uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin, [Babel](https://babeljs.io), and [Jest](https://facebook.github.io/jest/). It supports:
 
 - **ES7 syntax in your handler functions**
   - Use async/await
   - And much more!
+- **Support for unit tests**
+  - Run `npm test` to run your tests
 - **Sourcemaps for proper error messages**
   - Error message show the correct line numbers
   - Works in production with CloudWatch
@@ -82,6 +84,14 @@ To run a function on your local
 $ serverless invoke local --function hello
 ```
 
+Run your tests
+
+``` bash
+$ npm test
+```
+
+We use Jest to run our tests. You can read more about setting up your tests [here](https://facebook.github.io/jest/docs/en/getting-started.html#content).
+
 Deploy your project
 
 ``` bash
@@ -96,16 +106,6 @@ $ serverless deploy function --function hello
 
 To add another function as a new file to your project, simply add the new file and add the reference to `serverless.yml`. The `webpack.config.js` automatically handles functions in different files.
 
-### How It Works
-
-To ensure that you get all the ES7 capabilities while showing proper error messages and seamlessly integrating with the rest of your project, we do the following:
-
-- The `webpack.config.js` loads all your handlers using the `slsw.lib.entries` from the serverless-webpack plugin. This means that you don't have to edit the `webpack.config.js` when you add a new handler file.
-- Generate the sourcemaps for all the transpiled files and load the sourcemaps in each of the handler files.
-- Catch and log any unhandled exceptions to ensure that async functions can log errors.
-
-The result is that you should see proper error messages in your CloudWatch or console logs.
-
 ### Support
 
 - Send us an [email](mailto:contact@anoma.ly) if you have any questions
@@ -114,4 +114,4 @@ The result is that you should see proper error messages in your CloudWatch or co
 
 ### Maintainers
 
-Serverless ES7 Service is maintained by Frank Wang ([@fanjiewang](https://twitter.com/fanjiewang)) & Jay V ([@jayair](https://twitter.com/jayair)). [**Subscribe to our newsletter**](http://eepurl.com/cEaBlf) for updates. Send us an [email](mailto:contact@anoma.ly) if you have any questions.
+Serverless Node.js Starter is maintained by Frank Wang ([@fanjiewang](https://twitter.com/fanjiewang)) & Jay V ([@jayair](https://twitter.com/jayair)). [**Subscribe to our newsletter**](http://eepurl.com/cEaBlf) for updates. Send us an [email](mailto:contact@anoma.ly) if you have any questions.
