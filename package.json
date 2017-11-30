@@ -4,7 +4,7 @@
   "description": "A starter project for the Serverless Framework with ES7 support",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "MIT",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "jest": "^21.2.1",
     "source-map-support": "^0.4.18"
   }
 }
