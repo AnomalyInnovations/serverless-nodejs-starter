@@ -2,7 +2,7 @@
 
 A Serverless starter that adds ES7 async/await and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
-[Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-es7) uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin, [Babel](https://babeljs.io), and [Jest](https://facebook.github.io/jest/). It supports:
+[Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter) uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin, [Babel](https://babeljs.io), and [Jest](https://facebook.github.io/jest/). It supports:
 
 - **ES7 syntax in your handler functions**
   - Use async/await
@@ -55,7 +55,7 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 To create a new Serverless project with ES7 support.
 
 ``` bash
-$ serverless install --url https://github.com/AnomalyInnovations/serverless-es7 --name my-project
+$ serverless install --url https://github.com/AnomalyInnovations/serverless-nodejs-starter --name my-project
 ```
 
 Enter the new directory
@@ -109,7 +109,7 @@ To add another function as a new file to your project, simply add the new file a
 ### Support
 
 - Send us an [email](mailto:contact@anoma.ly) if you have any questions
-- Open a [new issue](https://github.com/AnomalyInnovations/serverless-es7/issues/new) if you've found a bug or have some suggestions.
+- Open a [new issue](https://github.com/AnomalyInnovations/serverless-nodejs-starter/issues/new) if you've found a bug or have some suggestions.
 - Or submit a pull request!
 
 ### Maintainers
