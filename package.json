@@ -1,7 +1,7 @@
 {
-  "name": "serverless-es7-starter",
+  "name": "serverless-nodejs-starter",
   "version": "1.1.0",
-  "description": "A starter project for the Serverless Framework with ES7 support",
+  "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
   "main": "handler.js",
   "scripts": {
     "test": "jest"
@@ -10,14 +10,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnomalyInnovations/serverless-es7.git"
+    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-source-map-support": "^1.0.0",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
     "serverless-webpack": "^4.2.0",
     "webpack": "^3.10.0",

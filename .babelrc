@@ -1,4 +1,4 @@
 {
   "plugins": ["source-map-support", "transform-runtime"],
-  "presets": ["es2015", "stage-3"]
+  "presets": ["env", "stage-3"]
 }
