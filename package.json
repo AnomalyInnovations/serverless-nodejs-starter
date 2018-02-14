@@ -21,6 +21,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "serverless-webpack": "^4.2.0",
     "webpack": "^3.10.0",
+    "serverless-offline": "^3.17.0",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
