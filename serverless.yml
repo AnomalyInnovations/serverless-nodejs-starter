@@ -6,9 +6,12 @@ plugins:
   - serverless-webpack
   - serverless-offline
 
+# serverless-webpack configuration
 # Enable auto-packing of external modules
 custom:
-  webpackIncludeModules: true
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
 
 provider:
   name: aws
