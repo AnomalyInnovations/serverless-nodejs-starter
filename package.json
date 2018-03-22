@@ -22,6 +22,7 @@
     "jest": "^21.2.1",
     "serverless-webpack": "^5.1.0",
     "webpack": "^4.2.0",
+    "serverless-offline": "^3.17.0",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
