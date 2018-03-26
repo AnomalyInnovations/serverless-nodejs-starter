@@ -1,9 +1,10 @@
 # NOTE: update this with your service name
-service: serverless-es7-starter
+service: serverless-nodejs-starter
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
   - serverless-webpack
+  - serverless-offline
 
 # serverless-webpack configuration
 # Enable auto-packing of external modules
@@ -17,6 +18,12 @@ provider:
   runtime: nodejs6.10
   stage: dev
   region: us-east-1
+  # To load environment variables externally
+  # rename env.example to env.yml and uncomment
+  # the following line. Also, make sure to not
+  # commit your env.yml.
+  #
+  #environment: ${file(env.yml):${self:provider.stage}}
 
 functions:
   hello:

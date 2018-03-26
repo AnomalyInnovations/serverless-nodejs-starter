@@ -1,12 +1,14 @@
 # Serverless Node.js Starter
 
-A Serverless starter that adds ES7 async/await and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
+A Serverless starter that adds ES7 async/await, serverless-offline, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
 [Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter) uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin, [Babel](https://babeljs.io), and [Jest](https://facebook.github.io/jest/). It supports:
 
 - **ES7 syntax in your handler functions**
   - Use async/await
   - And much more!
+- **Run API Gateway locally**
+  - Use `serverless offline start`
 - **Support for unit tests**
   - Run `npm test` to run your tests
 - **Sourcemaps for proper error messages**
@@ -14,6 +16,7 @@ A Serverless starter that adds ES7 async/await and unit test support. Part of th
   - Works in production with CloudWatch
 - **Automatic support for multiple handler files**
   - No need to add a new entry to your `webpack.config.js`
+- **Add environment variables for your stages**
 
 If you'd like to learn how to setup your existing Serverless project to support ES7 async/await, use this [guide on Serverless-Stack.com](http://serverless-stack.com/chapters/add-support-for-es6-javascript.html).
 
@@ -84,6 +87,12 @@ To run a function on your local
 $ serverless invoke local --function hello
 ```
 
+To simulate API Gateway locally using [serverless-offline](https://github.com/dherault/serverless-offline)
+
+``` bash
+$ serverless offline start
+```
+
 Run your tests
 
 ``` bash
@@ -105,6 +114,13 @@ $ serverless deploy function --function hello
 ```
 
 To add another function as a new file to your project, simply add the new file and add the reference to `serverless.yml`. The `webpack.config.js` automatically handles functions in different files.
+
+To add environment variables to your project
+
+1. Rename `env.example` to `env.yml`.
+2. Add environment variables for the various stages to `env.yml`.
+3. Uncomment `environment: ${file(env.yml):${self:provider.stage}}` in the `serverless.yml`.
+4. Make sure to not commit your `env.yml`.
 
 ### Support
 
