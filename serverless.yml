@@ -22,6 +22,7 @@ provider:
   # rename env.example to env.yml and uncomment
   # the following line. Also, make sure to not
   # commit your env.yml.
+  #
   #environment: ${file(env.yml):${self:provider.stage}}
 
 functions:
