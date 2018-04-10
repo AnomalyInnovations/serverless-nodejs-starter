@@ -1,12 +1,11 @@
 # Serverless Node.js Starter
 
-A Serverless starter that adds ES7 async/await, serverless-offline, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
+A Serverless starter that adds ES7 syntax, serverless-offline, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
-[Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter) uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin, [Babel](https://babeljs.io), and [Jest](https://facebook.github.io/jest/). It supports:
+[Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter) uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin, [Babel](https://babeljs.io), [serverless-offline](https://github.com/dherault/serverless-offline), and [Jest](https://facebook.github.io/jest/). It supports:
 
 - **ES7 syntax in your handler functions**
-  - Use async/await
-  - And much more!
+  - Use `import` and `export`
 - **Run API Gateway locally**
   - Use `serverless offline start`
 - **Support for unit tests**
@@ -17,8 +16,6 @@ A Serverless starter that adds ES7 async/await, serverless-offline, environment 
 - **Automatic support for multiple handler files**
   - No need to add a new entry to your `webpack.config.js`
 - **Add environment variables for your stages**
-
-If you'd like to learn how to setup your existing Serverless project to support ES7 async/await, use this [guide on Serverless-Stack.com](http://serverless-stack.com/chapters/add-support-for-es6-javascript.html).
 
 ---
 
