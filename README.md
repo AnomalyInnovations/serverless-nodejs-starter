@@ -6,6 +6,7 @@ A Serverless starter that adds ES7 syntax, serverless-offline, environment varia
 
 - **ES7 syntax in your handler functions**
   - Use `import` and `export`
+- **Package your functions using Webpack**
 - **Run API Gateway locally**
   - Use `serverless offline start`
 - **Support for unit tests**
