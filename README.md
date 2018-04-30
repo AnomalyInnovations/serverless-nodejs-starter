@@ -6,6 +6,7 @@ A Serverless starter that adds ES7 syntax, serverless-offline, environment varia
 
 - **ES7 syntax in your handler functions**
   - Use `import` and `export`
+- **Package your functions using Webpack**
 - **Run API Gateway locally**
   - Use `serverless offline start`
 - **Support for unit tests**
@@ -52,7 +53,7 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 
 ### Installation
 
-To create a new Serverless project with ES7 support.
+To create a new Serverless project.
 
 ``` bash
 $ serverless install --url https://github.com/AnomalyInnovations/serverless-nodejs-starter --name my-project
