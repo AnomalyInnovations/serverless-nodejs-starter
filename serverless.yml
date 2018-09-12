@@ -17,7 +17,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: dev
-  region: us-east-1
+  region: eu-west-2
   # To load environment variables externally
   # rename env.example to env.yml and uncomment
   # the following line. Also, make sure to not
@@ -27,8 +27,9 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: handlers.hello
     events:
       - http:
           path: hello
           method: get
+          cors: true
