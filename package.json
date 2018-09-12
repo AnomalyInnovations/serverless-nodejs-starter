@@ -1,10 +1,19 @@
 {
   "name": "serverless-nodejs-starter",
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**webpack**"
+    ]
+  },
   "version": "1.1.0",
   "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
   "main": "handler.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "author": "",
   "license": "MIT",
@@ -19,6 +28,11 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.22.0",
     "jest": "^21.2.1",
     "serverless-offline": "^3.25.6",
     "serverless-webpack": "^5.1.0",
