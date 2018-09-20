@@ -1,17 +1,17 @@
 {
   "name": "serverless-nodejs-starter",
+  "version": "1.1.0",
+  "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
+  "main": "handler.js",
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.js",
-      "!**/node_modules/**",
+      "!**/node_modules /**",
       "!**/coverage/**",
       "!**webpack**"
     ]
   },
-  "version": "1.1.0",
-  "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
-  "main": "handler.js",
   "scripts": {
     "test": "jest"
   },
@@ -33,10 +33,12 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.22.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
     "jest": "^21.2.1",
-    "serverless-offline": "^3.25.6",
+    "serverless-offline": "^3.25.12",
     "serverless-webpack": "^5.1.0",
-    "webpack": "^4.16.2",
+    "webpack": "^4.19.0",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
