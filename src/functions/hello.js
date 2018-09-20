@@ -1,6 +1,6 @@
 import { success, failure } from '../libs/response';
 
-const hello = async (event, context, callback) => {
+const hello = async (callback) => {
   try {
     const response = {
       message: `Go Serverless v1.0! ${await message({
