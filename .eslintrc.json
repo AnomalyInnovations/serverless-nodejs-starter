@@ -1,0 +1,7 @@
+{
+  "extends": ["airbnb-base", "plugin:jest/recommended"],
+  "rules": {
+    "no-use-before-define": "off",
+    "no-console": "off"
+  }
+}

@@ -17,18 +17,26 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: dev
-  region: us-east-1
+  region: eu-west-2
   # To load environment variables externally
   # rename env.example to env.yml and uncomment
   # the following line. Also, make sure to not
   # commit your env.yml.
   #
-  #environment: ${file(env.yml):${self:provider.stage}}
+  environment: ${file(env.yml):${self:provider.stage}}
 
 functions:
   hello:
-    handler: handler.hello
+    handler: handlers.hello
     events:
       - http:
           path: hello
           method: get
+          cors: true
+  goodbye:
+    handler: handlers.goodbye
+    events:
+      - http:
+          path: goodbye
+          method: get
+          cors: true
