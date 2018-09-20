@@ -23,7 +23,7 @@ provider:
   # the following line. Also, make sure to not
   # commit your env.yml.
   #
-  #environment: ${file(env.yml):${self:provider.stage}}
+  environment: ${file(env.yml):${self:provider.stage}}
 
 functions:
   hello:
@@ -31,5 +31,12 @@ functions:
     events:
       - http:
           path: hello
+          method: get
+          cors: true
+  goodbye:
+    handler: handlers.goodbye
+    events:
+      - http:
+          path: goodbye
           method: get
           cors: true
