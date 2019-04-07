@@ -1,8 +1,25 @@
 {
-  "plugins": ["source-map-support", "transform-runtime"],
+  "plugins": [
+    "source-map-support",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 2
+      }
+    ],
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-import-meta",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-json-strings"
+  ],
   "presets": [
-    ["env", { "node": "8.10" }],
-    "stage-3"
+    [
+      "@babel/env",
+      {
+        "targets": {
+        	"node": "8.10"
+        }
+      }
+    ]
   ]
 }
-
