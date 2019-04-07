@@ -1,5 +1,5 @@
 {
-  "name": "serverless-nodejs-starter",
+  "name": "notes-app-api",
   "version": "1.1.0",
   "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
   "main": "handler.js",
@@ -13,20 +13,25 @@
     "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-source-map-support": "^1.0.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "jest": "^21.2.1",
-    "serverless-offline": "^3.25.6",
-    "serverless-webpack": "^5.1.0",
-    "webpack": "^4.16.2",
-    "webpack-node-externals": "^1.6.0"
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "jest": "^24.7.1",
+    "serverless-offline": "4.9.4",
+    "serverless-webpack": "5.2.0",
+    "webpack": "4.29.6",
+    "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0",
-    "source-map-support": "^0.4.18"
+    "@babel/runtime-corejs2": "^7.0.0",
+    "source-map-support": "^0.5.11"
   }
 }
