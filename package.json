@@ -20,7 +20,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "jest": "^21.2.1",
-    "serverless-offline": "^3.25.6",
+    "serverless-offline": "^5.3.3",
     "serverless-webpack": "^5.1.0",
     "webpack": "^4.16.2",
     "webpack-node-externals": "^1.6.0"
