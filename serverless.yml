@@ -1,17 +1,10 @@
 # NOTE: update this with your service name
 service: serverless-nodejs-starter
 
-# Use the serverless-webpack plugin to transpile ES6
+# Use the serverless-bundle plugin to transpile ES6
 plugins:
-  - serverless-webpack
+  - serverless-bundle
   - serverless-offline
-
-# serverless-webpack configuration
-# Enable auto-packing of external modules
-custom:
-  webpack:
-    webpackConfig: ./webpack.config.js
-    includeModules: true
 
 provider:
   name: aws
