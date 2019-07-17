@@ -1,9 +1,12 @@
 # NOTE: update this with your service name
 service: serverless-nodejs-starter
 
-# Use the serverless-bundle plugin to transpile ES6
+# Create an optimized package for our functions 
+package:
+  individually: true
+
 plugins:
-  - serverless-bundle
+  - serverless-bundle # Package our functions with Webpack
   - serverless-offline
 
 provider:
