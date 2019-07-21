@@ -43,6 +43,10 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 );
 ```
 
+### Upgrading from v1.x
+
+We have detailed instructions on how to upgrade your app to the v2.0 of the starter if you were using v1.x before. [Read about it here](https://github.com/AnomalyInnovations/serverless-nodejs-starter/releases/tag/v2.0).
+
 ### Requirements
 
 - [Install the Serverless Framework](https://serverless.com/framework/docs/providers/aws/guide/installation/)
