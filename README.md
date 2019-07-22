@@ -139,4 +139,4 @@ To [override the default config](https://eslint.org/docs/user-guide/configuring)
 
 ---
 
-This plugin is maintained by [Anomaly Innovations](https://anoma.ly).
+This plugin is maintained by [Anomaly Innovations](https://anoma.ly); makers of [Seed](https://seed.run) and [Serverless Stack](https://serverless-stack.com).
