@@ -8,6 +8,7 @@ package:
 plugins:
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
+  - serverless-dotenv-plugin # Load .env as environment variables
 
 provider:
   name: aws
@@ -15,11 +16,12 @@ provider:
   stage: dev
   region: us-east-1
   # To load environment variables externally
-  # rename env.example to env.yml and uncomment
+  # rename env.example to .env and uncomment
   # the following line. Also, make sure to not
-  # commit your env.yml.
+  # commit your .env.
   #
-  #environment: ${file(env.yml):${self:provider.stage}}
+  #environment:
+  #  sampleEnvVar: ${env:SAMPLE_ENV_VAR}
 
 functions:
   hello:
