@@ -113,10 +113,10 @@ We use Jest to run our tests. You can read more about setting up your tests [her
 
 To add environment variables to your project
 
-1. Rename `env.example` to `env.yml`.
-2. Add environment variables for the various stages to `env.yml`.
-3. Uncomment `environment: ${file(env.yml):${self:provider.stage}}` in the `serverless.yml`.
-4. Make sure to not commit your `env.yml`.
+1. Rename `env.example` to `.env`.
+2. Add environment variables for your local stage to `.env`.
+3. Uncomment `environment:` block in the `serverless.yml` and reference the environment variable as `${env:MY_ENV_VAR}`. Where `MY_ENV_VAR` is added to your `.env` file.
+4. Make sure to not commit your `.env`.
 
 #### Linting
 
