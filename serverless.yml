@@ -21,7 +21,7 @@ provider:
   # commit your .env.
   #
   #environment:
-  #  sampleEnvVar: ${env:SAMPLE_ENV_VAR}
+  #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
 
 functions:
   hello:
