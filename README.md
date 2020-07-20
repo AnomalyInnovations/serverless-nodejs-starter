@@ -1,12 +1,11 @@
 # Serverless Node.js Starter
 
-A Serverless starter that adds ES7 syntax, serverless-offline, linting, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
+A Serverless starter that adds ES6, TypeScript, serverless-offline, linting, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
-[Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter) uses the [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle) plugin (an extension of the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin) and the [serverless-offline](https://github.com/dherault/serverless-offline) plugin. It supports:
+[Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter) uses the [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle) plugin and the [serverless-offline](https://github.com/dherault/serverless-offline) plugin. It supports:
 
 - **Generating optimized Lambda packages with Webpack**
-- **Use ES7 syntax in your handler functions**
-  - Use `import` and `export`
+- **Using ES6 or TypeScript in your handler functions**
 - **Run API Gateway locally**
   - Use `serverless offline start`
 - **Support for unit tests**
@@ -24,7 +23,7 @@ A Serverless starter that adds ES7 syntax, serverless-offline, linting, environm
 
 A demo version of this service is hosted on AWS - [`https://z6pv80ao4l.execute-api.us-east-1.amazonaws.com/dev/hello`](https://z6pv80ao4l.execute-api.us-east-1.amazonaws.com/dev/hello)
 
-And here is the ES7 source behind it
+And here is the ES6 source behind it
 
 ``` javascript
 export const hello = async (event, context) => {
@@ -118,9 +117,13 @@ To add environment variables to your project
 3. Uncomment `environment:` block in the `serverless.yml` and reference the environment variable as `${env:MY_ENV_VAR}`. Where `MY_ENV_VAR` is added to your `.env` file.
 4. Make sure to not commit your `.env`.
 
+#### TypeScript
+
+If [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle) detects a `tsconfig.json` in your service root, it'll compile it using TypeScript.
+
 #### Linting
 
-We use [ESLint](https://eslint.org) to lint your code via the [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle) plugin.
+We use [ESLint](https://eslint.org) to lint your code via [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle).
 
 You can turn this off by adding the following to your `serverless.yml`.
 
